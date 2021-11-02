@@ -41,6 +41,7 @@
     name: "{{ mysql_root_username }}"
     password: "{{ mysql_root_password }}"
     host: "127.0.0.1"
+    priv: '*.*:ALL,GRANT'
     state: present
     login_unix_socket: "{{ mysql_socket }}"
   when: 
