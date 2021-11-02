@@ -95,5 +95,5 @@
 
 - name: Remove MySQL test database.
   mysql_db: 
-    name: 'test'
-    state: absent"
+    name: test
+    state: absent
