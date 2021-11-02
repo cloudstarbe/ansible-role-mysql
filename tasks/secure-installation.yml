@@ -25,6 +25,14 @@
     - DELETE FROM mysql.user WHERE User='{{ mysql_root_username }}' AND Host NOT IN ('localhost', '127.0.0.1', '::1')
   changed_when: false
 
+- name: Set Mysql root password for 127.0.0.1
+  mysql_user:
+    name: "{{ mysql_root_username }}"
+    password: "{{ mysql_root_password }}"
+    host: "127.0.0.1"
+    state: present
+    login_unix_socket: "/var/run/mysqld/mysqld.sock"
+
 - name: Get list of hosts for the root user.
   command: mysql -NBe
     "SELECT Host
