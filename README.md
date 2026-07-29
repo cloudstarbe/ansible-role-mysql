@@ -84,16 +84,19 @@ mysql_users: []
 
 The MySQL users and their privileges. A user has the values:
 
-  - `name`
-  - `host` (defaults to `localhost`)
-  - `password` (can be plaintext or encrypted—if encrypted, set `encrypted: true`)
-  - `encrypted` (defaults to `false`)
-  - `priv` (defaults to `*.*:USAGE`)
-  - `append_privs` (defaults to `false`)
-  - `state`  (defaults to `present`)
-  - `case_sensitive` (defaults to `false`)
-  - `update_password` (defaults to `always`)
-  - `tls_requires` (defaults to `{}`)
+- `name`
+- `host` (defaults to `localhost`)
+- `password` (can be plaintext or encrypted—if encrypted, set `encrypted: true`; defaults to `omit`)
+- `encrypted` (defaults to `false`)
+- `priv` (defaults to `*.*:USAGE`)
+- `append_privs` (defaults to `false`)
+- `state` (defaults to `present`)
+- `case_sensitive` (defaults to `false`)
+- `update_password` (defaults to `always`)
+- `tls_requires` (defaults to `{}`)
+- `plugin` (defaults to `omit`)
+- `plugin_auth_string` (defaults to `omit`)
+- `plugin_hash_string` (defaults to `omit`)
 
 The formats of these are the same as in the `mysql_user` module.
 

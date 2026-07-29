@@ -132,6 +132,11 @@ mysql_users: []
 #     host: 127.0.0.1
 #     password: secret
 #     priv: *.*:USAGE
+#   - name: example_socket
+#     host: localhost
+#     plugin: unix_socket
+#     plugin_hash_string: monitoring
+#     priv: *.*:USAGE
 
 mysql_disable_log_bin: false
 
